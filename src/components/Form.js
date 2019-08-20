@@ -19,7 +19,8 @@ class Form extends Component {
 
     onNameChange = (e) => {
         const newValue = e.target.value;
-        const regex = /^[a-zA-Z]+(([', -][a-zA-Z ])?[a-zA-Z]*)*/
+        // const regex = /^[a-zA-Z]+(([', -][a-zA-Z ])?[a-zA-Z]*)*/
+        const regex = /^[a-z][a-z\s]*$/
         
         this.setState({url : newValue})
           this.setState({isNameValid: regex.test(newValue)})
